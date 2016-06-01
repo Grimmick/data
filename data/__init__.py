@@ -249,6 +249,7 @@ class Data(Iterator):
             self.save_to(tmp)
             tmp.flush()
             tmp.seek(0)
+            tmp.close()
             yield tmp
         finally:
             try:
